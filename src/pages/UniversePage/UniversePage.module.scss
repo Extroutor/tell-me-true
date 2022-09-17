@@ -1,0 +1,126 @@
+.universe {
+  .wrapper {
+
+    .universe_short_info {
+      margin: 30px auto 30px;
+      width: 80%;
+
+      .title {
+        text-transform: uppercase;
+        color: #153060;
+        margin-bottom: 10px;
+        width: 50%;
+      }
+
+      .city {
+        font-size: 16px;
+        font-weight: 200;
+      }
+
+      .rating {
+        color: #ffa100;
+        font-weight: 700;
+        font-size: 48px;
+        margin-top: 20px;
+      }
+
+      .description {
+        color: #153060;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    .rating_top {
+      width: 80%;
+      margin: 20px auto 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      background-color: #153060;
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .review_block {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto 30px;
+      left: 0;
+      right: 0;
+      background-color: rgba(21, 48, 96, 0.05);
+      padding: 40px 0;
+
+      .review_title {
+        color: #153060;
+        font-size: 24px;
+        font-weight: 400;
+        padding-bottom: 20px;
+      }
+
+      .reviews {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+
+        .review_item {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          margin: 10px 0;
+
+          .left {
+            display: flex;
+            width: 60%;
+            align-items: baseline;
+
+            .img_wrapper {
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+
+            .text {
+              height: 200px;
+              width: 80%;
+            }
+          }
+
+          .right {
+            width: 30%;
+            height: 200px;
+            margin-top: 10px;
+            .rating_item {
+              display: flex;
+              flex-direction: column;
+
+              .string {
+                display: flex;
+
+                align-items: center;
+                b {
+                  margin-right: 10px;
+                  //color: orange;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

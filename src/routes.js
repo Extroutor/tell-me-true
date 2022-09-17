@@ -1,7 +1,7 @@
 import {MAIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, UNIVERSE_ROUTE} from './utils/consts'
 import Auth from "./pages/Auth/Auth";
 import Main from "./pages/Main";
-import Universe from "./pages/Universe";
+import UniversePage from "./pages/UniversePage/UniversePage";
 
 export const publicRoutes = [
     {
@@ -18,7 +18,7 @@ export const publicRoutes = [
     },
     {
         path: UNIVERSE_ROUTE + '/:id',
-        Component: Universe
+        Component: UniversePage
     },
 
 ]
@@ -34,6 +34,6 @@ export const authRoutes = [
     },
     {
         path: UNIVERSE_ROUTE + '/:id',
-        Component: Universe
+        Component: UniversePage
     },
 ]

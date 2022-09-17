@@ -1,29 +1,19 @@
 import React, {useState} from 'react';
 import {UNIVERSE_ROUTE} from "../utils/consts";
 import {useNavigate} from "react-router-dom";
+import {useSelector} from "react-redux";
+
 const Main = () => {
     const navigate = useNavigate()
     const [options, setOptions] = useState([])
-    const defaultOptions = [
-        {
-            id: 1,
-            name: 'ITMO'
-        },
-        {
-            id: 2,
-            name: 'СПБГУ'
-        },
-        {
-            id: 3,
-            name: 'ПОЛИТЕХ'
-        }
-    ]
-
+    const defaultOptions = useSelector(store => store.universe.universeList)
 
     const onInputChange = (e) => {
         setOptions(
             defaultOptions.filter((option) => option.name.toLowerCase().includes(e.target.value))
         )
+        console.log('option ',options)
+
         if (e.target.value === '') {
             setOptions([])
         }
@@ -47,6 +37,7 @@ const Main = () => {
                         />
                         <ul>
                             {options.map(item => {
+                                console.log('item ', item)
                                 return (
                                     <button
                                         key={item.id}
